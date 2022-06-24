@@ -1,6 +1,6 @@
 import React from 'react';
 import ListaPost from '../assets/components/ListaPost';
-import ListaCategorias from './ListaCategorias';
+import ListaCategorias from '../assets/components/ListaCategorias';
 
 export default function Home() {
   return (

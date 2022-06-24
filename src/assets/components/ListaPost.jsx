@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 export default function ListaPost({url}){
 
     const[posts, setPosts] = useState([]);
+    console.log(posts);
 
     useEffect(() => {
         busca(url, setPosts);

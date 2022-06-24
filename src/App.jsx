@@ -6,6 +6,7 @@ import Sobre from './paginas/Sobre';
 import Pagina404 from './paginas/Pagina404';
 import Cabecalho from './assets/components/Cabecalho';
 import Post from './paginas/Post';
+import Categoria from './paginas/Categoria';
 
 export default function App() {
 
@@ -16,6 +17,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/sobre" element={<Sobre />} />
         <Route path="/posts/:id" element={<Post />} />
+        <Route path="/categoria/:id/*" element={<Categoria />} />
         <Route path="*" element={<Pagina404 />} />
       </Routes>
     </Router>
