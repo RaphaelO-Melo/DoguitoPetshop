@@ -4,6 +4,7 @@ import ListaPost from '../assets/components/ListaPost'
 import {useParams, useLocation, Link} from 'react-router-dom'
 import { useEffect, useState } from 'react';
 import { busca } from '../api/api';
+import SubCabecalho from '../assets/components/SubCabecalho';
 
 export default function Categoria() {
 
@@ -19,10 +20,7 @@ export default function Categoria() {
     
     return(
         <>
-            <div className="container">
-                <h2 className="titulo-pagina">Pet Notícias</h2>
-            </div>
-
+            <SubCabecalho />
             <ListaCategorias />
             <ul className="lista-categorias container flex">
                 {

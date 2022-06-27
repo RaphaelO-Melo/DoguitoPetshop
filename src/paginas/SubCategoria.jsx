@@ -3,6 +3,7 @@ import { Link, useLocation, useParams } from "react-router-dom";
 import { busca } from "../api/api";
 import ListaCategorias from "../assets/components/ListaCategorias";
 import ListaPost from "../assets/components/ListaPost";
+import SubCabecalho from "../assets/components/SubCabecalho";
 
 export default function SubCategoria(){
 
@@ -19,10 +20,7 @@ export default function SubCategoria(){
 
     return(
         <>
-             <div className="container">
-                <h2 className="titulo-pagina">Pet Notícias</h2>
-            </div>
-
+            <SubCabecalho />
             <ListaCategorias />
             <ul className="lista-categorias container flex">
                 {

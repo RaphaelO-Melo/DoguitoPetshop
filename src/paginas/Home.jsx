@@ -1,13 +1,12 @@
 import React from 'react';
 import ListaPost from '../assets/components/ListaPost';
 import ListaCategorias from '../assets/components/ListaCategorias';
+import SubCabecalho from '../assets/components/SubCabecalho';
 
 export default function Home() {
   return (
     <main>
-      <div className="container">
-        <h2 className="titulo-pagina">Pet notícias</h2>
-      </div>
+      <SubCabecalho />
       <ListaCategorias />
       <ListaPost url={"/posts"} />
     </main>
