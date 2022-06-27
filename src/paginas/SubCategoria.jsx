@@ -1,25 +1,25 @@
-import '../assets/css/blog.css'
-import ListaCategorias from '../assets/components/ListaCategorias'
-import ListaPost from '../assets/components/ListaPost'
-import {useParams, useLocation, Link} from 'react-router-dom'
-import { useEffect, useState } from 'react';
-import { busca } from '../api/api';
+import { useEffect, useState } from "react";
+import { Link, useLocation, useParams } from "react-router-dom";
+import { busca } from "../api/api";
+import ListaCategorias from "../assets/components/ListaCategorias";
+import ListaPost from "../assets/components/ListaPost";
 
-export default function Categoria() {
+export default function SubCategoria(){
 
-    const { id } = useParams();
+    const { id, idsubcategoria } = useParams();
     const { pathname } = useLocation();
     const [subcategorias, setSubcategorias] = useState([]);
     
     useEffect(() => {
         busca(`/categorias/${id}`, categoria => {
             setSubcategorias(categoria.subcategorias);
+            console.log(subcategorias);
         });
     }, [id]);
-    
+
     return(
         <>
-            <div className="container">
+             <div className="container">
                 <h2 className="titulo-pagina">Pet Notícias</h2>
             </div>
 
@@ -35,7 +35,7 @@ export default function Categoria() {
                     ))
                 }
             </ul>
-            <ListaPost url={`/posts?categoria=${id}`}/>
+            <ListaPost url={`/posts?subcategoria=${idsubcategoria}`}/>
         </>
-    )
+    );
 }

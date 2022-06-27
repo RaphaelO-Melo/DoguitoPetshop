@@ -7,6 +7,7 @@ import Pagina404 from './paginas/Pagina404';
 import Cabecalho from './assets/components/Cabecalho';
 import Post from './paginas/Post';
 import Categoria from './paginas/Categoria';
+import SubCategoria from './paginas/SubCategoria';
 
 export default function App() {
 
@@ -18,6 +19,7 @@ export default function App() {
         <Route path="/sobre" element={<Sobre />} />
         <Route path="/posts/:id" element={<Post />} />
         <Route path="/categoria/:id/*" element={<Categoria />} />
+        <Route path="/categoria/:id/:idsubcategoria/*" element={<SubCategoria />} />
         <Route path="*" element={<Pagina404 />} />
       </Routes>
     </Router>
