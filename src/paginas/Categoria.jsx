@@ -26,7 +26,7 @@ export default function Categoria() {
                 {
                     subcategorias.map(subcategoria => (
                         <li className={`lista-categorias__categoria lista-categorias__categoria--${id}`}  key={subcategoria}>
-                            <Link to={`${pathname}/${subcategoria}`}>
+                            <Link to={`${subcategoria}`}>
                                 {subcategoria}
                             </Link>
                         </li>

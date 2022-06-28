@@ -10,11 +10,12 @@ export default function SubCategoria(){
     const { id, idsubcategoria } = useParams();
     const { pathname } = useLocation();
     const [subcategorias, setSubcategorias] = useState([]);
+
+    console.log(id, idsubcategoria);
     
     useEffect(() => {
         busca(`/categorias/${id}`, categoria => {
             setSubcategorias(categoria.subcategorias);
-            console.log(subcategorias);
         });
     }, [id]);
 
@@ -26,7 +27,7 @@ export default function SubCategoria(){
                 {
                     subcategorias.map(subcategoria => (
                         <li className={`lista-categorias__categoria lista-categorias__categoria--${id}`}  key={subcategoria}>
-                            <Link to={`${pathname}/${subcategoria}`}>
+                            <Link to={`/categoria/${id}/${subcategoria}`}>
                                 {subcategoria}
                             </Link>
                         </li>
